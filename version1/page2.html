@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Application</title>
+	<style>
+		.radio-img {
+			display: inline-block;
+			position: relative;
+			padding-left: 40px;
+			margin-right: 20px;
+			margin-bottom: 10px;
+			cursor: pointer;
+			font-size: 16px;
+			user-select: none;
+		}
+
+		.radio-img input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;
+			background-color: #eee;
+			border-radius: 50%;
+			margin-top: 4px;
+		}
+
+		.radio-img:hover input ~ .checkmark {
+			background-color: #ccc;
+		}
+
+		.radio-img input:checked ~ .checkmark {
+			background-color: #2196F3;
+		}
+
+		.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+
+		.radio-img input:checked ~ .checkmark:after {
+			display: block;
+		}
+
+		.radio-img .checkmark:after {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: white;
+		}
+
+		.radio-img img {
+			vertical-align: middle;
+			width: 30px;
+			height: 30px;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Page 2 -->
+	<div class="container">
+		<h1>Choose Your Preferences</h1>
+		<label>Gender:</label>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label>
+		<br><br>
+		<div>
+			<h2>Select your Food:</h2>
+			<label class="radio-img">
+				<input type="radio" name="food" value="pizza">
+				<img src="../images/pizza.jpg?text=A" alt="Pizza">
+				Pizza
+				<span class="checkmark"></span>
+			</label>
+			<label class="radio-img">
+				<input type="radio" name="food" value="taco">
+				<img src="../images/taco.jpg?text=B" alt="Taco">
+				Taco
+				<span class="checkmark"></span>
+			</label>
+			<label class="radio-img">
+				<input type="radio" name="food" value="burger">
+				<img src="../images/burger.jpg?text=C" alt="Burger">
+				Burger
+				<span class="checkmark"></span>
+			</label>
+		</div>
+
+		<div>
+			<label for="slider">Spice Indicator:</label>
+			<input type="range" id="slider" name="slider" min="0" max="100" value="50"><br><br>
+		</div>
+		
+		<br><br>
+		<div>
+			<label for="about">Tell us anything extra about your order:</label>
+			<br><br>
+			<textarea id="about" name="about" rows="5"></textarea>
+			<br><br>
+		</div>
+		<button type="button" onclick="location.href='page1.html'">Previous</button>
+		<button type="button" onclick="location.href='page3.html'">Next</button>
+	</div>
+	
+</body>
+</html>

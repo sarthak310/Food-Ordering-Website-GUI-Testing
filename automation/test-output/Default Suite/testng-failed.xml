@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="automation(failed)">
+    <classes>
+      <class name="UITests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testPage2About"/>
+          <include name="beforeTest"/>
+          <include name="testPage3Address"/>
+          <include name="setUp"/>
+          <include name="testPage1Flow"/>
+          <include name="testPage1TnC"/>
+        </methods>
+      </class> <!-- UITests -->
+    </classes>
+  </test> <!-- automation(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

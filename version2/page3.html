@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Application</title>
+	<style>
+		.rotate-button {
+            transform: rotate(180deg);
+			vertical-align: top;
+        }
+
+	</style>
+</head>
+<body>
+  	<!-- Page 3 -->
+	<div>
+		<h1>Complete Your Order</h1>
+		<div>
+			<input type="text" id="address" name="address" placeholder="Street address">
+		</div>
+		<img src="../images/delivery.jpg" alt="Restaurant image" style="width: 1000px; height: 500px;">
+		<div>
+			<label for="address">Address:</label><br>
+			<label for="city">City:</label>
+			<input type="text" id="city" name="city" placeholder="City"><br><br>
+			<label for="state">State:</label>
+			<input type="text" id="state" name="state" placeholder="State"><br><br>
+			<label for="zip">Zip Code:</label>
+			<input type="text" id="zip" name="zip" placeholder="Zip code"><br><br>
+		</div>
+
+		<div>
+			<label for="delivery-speed">Delivery Speed:</label>
+			<select id="delivery-speed" name="delivery-speed">
+			  <option value="standard">Standard (Within 120 minutes - 0$ Extra)</option>
+			  <option value="fast">Fast (Within 60 minutes - 10$ Extra)</option>
+			  <option value="superfast">Super Fast (Within 30 minutes - 20$ Extra)</option>
+			</select>
+			<br><br>
+		</div>
+		
+		<div>
+			<textarea id="textarea" name="textarea" rows="4" cols="50">Enter anything extra about your order here...</textarea><br><br>
+		</div>
+		
+		<div>
+			<input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        	<label for="subscribe">Subscribe to our newsletter</label><br><br>
+		</div>
+
+
+		<button type="button" onclick="location.href='page2.html'" class="rotate-button">Previous</button>
+
+		<button type="submit" onclick="location.href='confirmation.html'" style="height: 100px; width: 200px;">Confirm Your Order</button>
+
+	</div>
+	
+</body>
+</html>
